@@ -10,6 +10,7 @@ import java.util.HashMap;
 import com.aventstack.extentreports.gherkin.model.Given;
 
 import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 
 public class userEndPoints {
 	
@@ -28,18 +29,21 @@ public class userEndPoints {
 	
 	@Test
 	public void postBookDetails() {
-		String title = "HarryPorter";
+		String BookTitle = "HarryPorter";
 		
-		given()
+		Response response=given()
 			.contentType(ContentType.JSON)
 			.accept(ContentType.JSON)
-			.body(title)
+			.body(BookTitle)
 		.when()
 			.post(Routes.post_url)
 		.then()
 			.statusCode(400)
-			.log().all();
+			.extract().response();
+		int statusCode = response.getStatusCode();
+	    System.out.println("Create Book Status Code: " + statusCode);
 	}
+	 
 	
 	@Test
 	public void getNewBookDetails() {
@@ -50,7 +54,7 @@ public class userEndPoints {
 			.get(Routes.get_url)
 		.then()
 			.statusCode(200)
-			.body("title", equalTo("HarryPorter"))
+			.body("BookTitle", equalTo("HarryPorter"))
 			.log().all();
 	}
 	
