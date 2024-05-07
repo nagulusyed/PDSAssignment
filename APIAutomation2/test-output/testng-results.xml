@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-05-07T14:54:21 IST" name="Default suite" finished-at="2024-05-07T14:54:28 IST" duration-ms="6548">
+    <groups>
+    </groups>
+    <test started-at="2024-05-07T14:54:21 IST" name="Default test" finished-at="2024-05-07T14:54:28 IST" duration-ms="6548">
+      <class name="APITests.UserTest2">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:APITests.UserTest2@33d512c1]" started-at="2024-05-07T14:54:21 IST" name="SetUp" finished-at="2024-05-07T14:54:21 IST" duration-ms="30" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method signature="testCreateUser()[pri:1, instance:APITests.UserTest2@33d512c1]" started-at="2024-05-07T14:54:21 IST" name="testCreateUser" finished-at="2024-05-07T14:54:26 IST" duration-ms="4350" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testGetUser()[pri:2, instance:APITests.UserTest2@33d512c1]" started-at="2024-05-07T14:54:26 IST" name="testGetUser" finished-at="2024-05-07T14:54:26 IST" depends-on-methods="APITests.UserTest2.testCreateUser" duration-ms="474" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUser -->
+        <test-method signature="testUpdateUser()[pri:3, instance:APITests.UserTest2@33d512c1]" started-at="2024-05-07T14:54:26 IST" name="testUpdateUser" finished-at="2024-05-07T14:54:27 IST" duration-ms="1048" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateUser -->
+        <test-method signature="testDeleteUser()[pri:4, instance:APITests.UserTest2@33d512c1]" started-at="2024-05-07T14:54:27 IST" name="testDeleteUser" finished-at="2024-05-07T14:54:28 IST" depends-on-methods="APITests.UserTest2.testUpdateUser" duration-ms="565" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteUser -->
+      </class> <!-- APITests.UserTest2 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
